@@ -6,3 +6,299 @@ info:
 servers:
   - url: http://localhost:3000/
 paths:
+  /api/alerts/{alertId}:
+    get:
+      tags:
+        - Alert API
+      description: Get alert by id
+      parameters:
+        - name: alertId
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Success get alert
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                      background_color:
+                        type: string
+                      highlight_color:
+                        type: string
+                      text_color:
+                        type: string
+                      duration:
+                        type: number
+                      is_border:
+                        type: boolean
+                      is_unit:
+                        type: boolean
+                      created_at:
+                        type: number
+                      updated_at:
+                        type: number
+
+    put:
+      tags:
+        - Alert API
+      description: Update alert by id
+      parameters:
+        - name: alertId
+          in: path
+          required: true
+          schema:
+            type: number
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                background_color:
+                  type: string
+                highlight_color:
+                  type: string
+                text_color:
+                  type: string
+                duration:
+                  type: number
+                is_border:
+                  type: boolean
+                is_unit:
+                  type: boolean
+      responses:
+        '200':
+          description: Success update alert
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                      background_color:
+                        type: string
+                      highlight_color:
+                        type: string
+                      text_color:
+                        type: string
+                      duration:
+                        type: number
+                      is_border:
+                        type: boolean
+                      is_unit:
+                        type: boolean
+                      created_at:
+                        type: number
+                      updated_at:
+                        type: number
+
+  /api/targets/{targetId}:
+    get:
+      tags:
+        - Target API
+      description: Get target by id
+      parameters:
+        - name: targetId
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Success get target
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                      background_color:
+                        type: string
+                      highlight_color:
+                        type: string
+                      text_color:
+                        type: string
+                      is_border:
+                        type: boolean
+                      title:
+                        type: string
+                      target:
+                        type: number
+                      created_at:
+                        type: number
+                      updated_at:
+                        type: number
+
+    put:
+      tags:
+        - Target API
+      description: Update target by id
+      parameters:
+        - name: targetId
+          in: path
+          required: true
+          schema:
+            type: number
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                background_color:
+                  type: string
+                highlight_color:
+                  type: string
+                text_color:
+                  type: string
+                is_border:
+                  type: boolean
+                title:
+                  type: string
+                target:
+                  type: number
+      responses:
+        '200':
+          description: Success update target
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                      background_color:
+                        type: string
+                      highlight_color:
+                        type: string
+                      text_color:
+                        type: string
+                      is_border:
+                        type: boolean
+                      title:
+                        type: string
+                      target:
+                        type: number
+                      created_at:
+                        type: number
+                      updated_at:
+                        type: number
+
+  /api/running-texts/{textId}:
+    get:
+      tags:
+        - Running Text API
+      description: Get running text by id
+      parameters:
+        - name: textId
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Success get running text
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                      background_color:
+                        type: string
+                      highlight_color:
+                        type: string
+                      text_color:
+                        type: string
+                      speed:
+                        type: number
+                      is_border:
+                        type: boolean
+                      message:
+                        type: boolean
+                      created_at:
+                        type: number
+                      updated_at:
+                        type: number
+
+    put:
+      tags:
+        - Running Text API
+      description: Update running text by id
+      parameters:
+        - name: textId
+          in: path
+          required: true
+          schema:
+            type: number
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                background_color:
+                  type: string
+                highlight_color:
+                  type: string
+                text_color:
+                  type: string
+                speed:
+                  type: number
+                is_border:
+                  type: boolean
+                message:
+                  type: boolean
+      responses:
+        '200':
+          description: Success update running text
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                      background_color:
+                        type: string
+                      highlight_color:
+                        type: string
+                      text_color:
+                        type: string
+                      speed:
+                        type: number
+                      is_border:
+                        type: boolean
+                      message:
+                        type: boolean
+                      created_at:
+                        type: number
+                      updated_at:
+                        type: number
