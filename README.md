@@ -15,6 +15,8 @@ This is go huberi app.
 - GORM (ORM) : https://github.com/go-gorm/gorm
 - Viper (Configuration) : https://github.com/spf13/viper
 - Golang Migrate (Database Migration) : https://github.com/golang-migrate/migrate
+- Go Playground Validator (Validation) : https://github.com/go-playground/validator
+- Logrus (Logger) : https://github.com/sirupsen/logrus
 
 ## Configuration
 
@@ -45,5 +47,5 @@ migrate -database "mysql://root@tcp(localhost:3306)/huberi" -path db/migrations 
 ### Run web server
 
 ```bash
-go run main.go
+go run cmd/web/main.go
 ```
