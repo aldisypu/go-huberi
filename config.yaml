@@ -5,6 +5,10 @@ app :
 
 web : 
   port : 3000
+  prefork : false
+
+log :
+  level : 6
 
 database : 
   username : "root"
@@ -12,3 +16,7 @@ database :
   host : "localhost"
   port : 3306
   name : "huberi"
+  pool:
+    idle: 10
+    max: 100
+    lifetime: 300
